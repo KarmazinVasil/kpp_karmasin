@@ -133,4 +133,4 @@ function setDirection(x, y) {
     direction = { x, y };
   }
 }
-document.getElementById('mobile-controls').style.display = 'block';
+//document.getElementById('mobile-controls').style.display = 'block';
