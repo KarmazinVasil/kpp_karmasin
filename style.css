@@ -29,3 +29,28 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
   
+  #mobile-controls {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 75%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  
+  .horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .control-btn {
+    font-size: 24px;
+    padding: 10px 15px;
+    background-color: #33333323;
+    color: rgba(255, 255, 255, 0.272);
+    border: none;
+    border-radius: 8px;
+  }
+  
