@@ -116,5 +116,21 @@ function changeDirection(event) {
 
 document.addEventListener('keydown', changeDirection);
 
-// Start game
 let gameInterval = setInterval(gameLoop, speed);
+
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+  document.getElementById('mobile-controls').style.display = 'block';
+}
+
+document.getElementById('btn-up').addEventListener('click', () => setDirection(0, -1));
+document.getElementById('btn-down').addEventListener('click', () => setDirection(0, 1));
+document.getElementById('btn-left').addEventListener('click', () => setDirection(-1, 0));
+document.getElementById('btn-right').addEventListener('click', () => setDirection(1, 0));
+
+function setDirection(x, y) {
+  if ((x !== -direction.x || y !== -direction.y) &&
+      (direction.x !== x || direction.y !== y)) {
+    direction = { x, y };
+  }
+}
+document.getElementById('mobile-controls').style.display = 'block';
